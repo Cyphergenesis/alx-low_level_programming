@@ -1,6 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include <string.h>
 /**
  *main - prints the alphabet in lowercase, followed by a new line.
  *
@@ -8,15 +7,11 @@
  */
 int main(void)
 {
-	char chrac = 'a';
+	char ch;
 
-	while (chrac <= 'z')
-	{
-		chrac++;
+	for (ch = 'a'; ch <= 'z'; ch++)
+		putchar(ch);
 
-	putchar(chrac);
-
-	}
 
 	return (0);
 }
