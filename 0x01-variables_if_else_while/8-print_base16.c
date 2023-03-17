@@ -7,16 +7,18 @@
  */
 int main(void)
 {
-	char chrac;
+	int num;
+	char ch;
 
-	for (chrac = 0; chrac <= 9; chrac++)
+	for (num = '0'; num <= '9'; num++)
 	{
-		putchar(chrac);
+		putchar(num);
 	}
-	for (chrac = 'a'; chrac <= 'f'; chrac++)
+	for (ch = 'a'; ch <= 'f'; ch++)
 	{
-		putchar(chrac);
+		putchar(ch);
 	}
+	putchar('\n');
 
 	return (0);
 }
