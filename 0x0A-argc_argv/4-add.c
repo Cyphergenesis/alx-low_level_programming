@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "main.h"
+#include <ctype.h>
 /**
  *main - print the name of the program
  *@argc: count number of arguments
@@ -8,22 +9,21 @@
  *
  *Return: Always 0 (Success)
  */
-int main(int argc, char *argv[]__attribute__((unused)))
+int main(int argc, char *argv[])
 {
-	int sum = 0;
 	int i;
-	char a[1];
+	int sum = 0;
 
 	for (i = 1; i < argc; i++)
 	{
-		if (argc > 1 || argc != a[1])
+		if (!isdigit(argv[i]))
 		{
-		sum += atoi(argv[i]);
+			printf("Error\n");
+			return (1);
 		}
 		else
 		{
-		printf("Error\n");
-		return (1);
+			sum += atoi(argv[i]);
 		}
 	}
 	printf("%d", sum);
